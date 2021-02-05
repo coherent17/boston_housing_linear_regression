@@ -56,7 +56,27 @@ Y = boston['MEDV']
 
 X_train, X_test, Y_train, Y_test = train_test_split(X, Y, test_size = 0.2)
 print(X_train)
-print(X_test)
 print(Y_train)
+print(X_test)
 print(Y_test)
+
+#building the model
+w=np.zeros(2)
+X_train_mean=np.mean(X_train)
+Y_train_mean=np.mean(Y_train)
+X_train_sqr_mean=np.mean(X_train**2)
+X_train_Y_train_mean=np.mean(X_train*Y_train)
+
+print(X_train_mean)
+print(Y_train_mean)
+print(X_train_sqr_mean)
+print(X_train_Y_train_mean)
+
+
+'''a=1
+for t in range(0,len(X_train)):
+    w[0]=w[0]-a*(w[0]+w[1]*X_train_mean-Y_train_mean)
+    w[1]=w[1]-a*(w[0]*X_train_mean+w[1]*X_train_sqr_mean-X_train_Y_train_mean)
+print(w[1])
+print(w[0])'''
 
