@@ -50,6 +50,3 @@ Y = boston['MEDV']
 
 X_train, X_test, Y_train, Y_test = train_test_split(X, Y, test_size = 0.2)
 
-theta,cost=linear_regression(X_train,Y_train,0.0001,30000)
-
-print(theta)
